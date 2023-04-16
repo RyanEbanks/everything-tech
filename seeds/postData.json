@@ -1,0 +1,46 @@
+[
+    {
+        "title": "Binary",
+        "body": "I am trying to understand binary but the math is confusing me, 1+0 is 1 but why is 1+1 not 2?"
+    },
+    {
+        "title": "CSS",
+        "body": "I linked my CSS in the <head> using <link rel='stylesheet' href='/css/style.css'> and the file path link back."
+    },
+    {
+        "title": "Learning Programming",
+        "body": "I want to learn programming but I don't know where to start."
+    },
+    {
+        "title": "Local Storage",
+        "body": "My local storage isn't setting the item properly but I don't know what to do. I don't want to show my code because I'm new and embarrassed."
+    },
+    {
+        "title": "CSS Frameworks",
+        "body": "I've been using bootstrap but I don't like how all my projects look the same, any good frameworks out there?"
+    },
+    {
+        "title": "Is youtube a good teacher?",
+        "body": "Youtube has a lot of false information, can I trust that when learning new topics?"
+    },
+    {
+        "title": "Stress",
+        "body": "How do you get rid of the stress of coding all day every day?"
+    },
+    {
+        "title": "Two programming languages collabing??",
+        "body": "I'm not sure how to phrase this but can I use two programming lanuages together to create an app? I just started coding but I would like to know for future reference."
+    },
+    {
+        "title": "Back End Code",
+        "body": "I am a UX designer and I just started coding. I want to get real good but back end seems really hard so can I become really good at programming with just front-end designing?"
+    },
+    {
+        "title": "I want to learn to code",
+        "body": "I want to learn to code but Youtube isn't for me, I don't think I have the self-discipline to find topics by myself."
+    },
+    {
+        "title": "What are cookies?",
+        "body": "I want to learn what cookies are so I can use them in my code, I'm new to coding but when I hear cookies I think about the food."
+    }
+]
