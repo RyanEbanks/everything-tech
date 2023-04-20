@@ -1,4 +1,4 @@
 node_modules
 .env
 .DS_Store
-views/layouts/test.html
+views/layouts/text.html
