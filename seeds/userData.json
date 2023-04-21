@@ -1,42 +1,57 @@
 [
     {
-        "username": "smolOne24",
+        "email": "smolboy@gmail.com",
+        "user_name": "smolOne24",
         "password": "password123"
     },
     {
-        "username": "jackjack876",
+        "email": "jack@hotmail.com",
+        "user_name": "jackjack876",
         "password": "password123"
     },
     {
-        "username": "mario16",
+        "email": "itsAMeM@yahoo.com",
+        "user_name": "mario16",
         "password": "password123"
     },
     {
-        "username": "luigi76",
+        "email": "ihaveamansion@outlook.com",
+        "user_name": "luigi76",
         "password": "password123"    
     },
     {
-        "username": "wario578",
+        "email": "wwario@gmail.com",
+        "user_name": "wario578",
         "password": "password123"
     },
     {
-        "username": "waluigi258",
+        "email": "wariosfriend@yahoo.com",
+        "user_name": "waluigi258",
         "password": "password123"      
     },
     {
-        "username": "dogman8",
+        "email": "barkbark@outlook.com",
+        "user_name": "dogman8",
         "password": "password123"
     },
     {
-        "username": "phineas090",
+        "email": "summerbelongsto@yahoo.com",
+        "user_name": "phineas090",
         "password": "password123"        
     },
     {
-        "username": "ferb7",
+        "email": "silence@gmail.com",
+        "user_name": "ferb7",
         "password": "password123"
     },
     {
-        "username": "iambatman",
+        "email": "justiceleague7@gmail.com",
+        "user_name": "iambatman",
+        "password": "password123"        
+    },
+    {
+        "email": "supersaiyan@hotmail.com",
+        "user_name": "itsMeGoku",
         "password": "password123"        
     }
 ]

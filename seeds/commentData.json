@@ -1,35 +1,57 @@
 [
     {
-        "body": "To add binary follow this concept. 0 + 0 = 0, 0 + 1 = 1 and 1 + 1 = 11 (this is saying one one not eleven)."
+        "body": "To add binary follow this concept. 0 + 0 = 0, 0 + 1 = 1 and 1 + 1 = 11 (this is saying one one not eleven).",
+        "user_id": 5,
+        "post_id": 1
     },
     {
-        "body": "You're program should be working correctly."
+        "body": "You're program should be working correctly.",
+        "user_id": 4,
+        "post_id": 2
     },
     {
-        "body": "JavaScript is a perfect starter language for you."
+        "body": "JavaScript is a perfect starter language for you.",
+        "user_id": 3,
+        "post_id": 3
     },
     {
-        "body": "I actually can't help you with this try using w3Schools."
+        "body": "I actually can't help you with this try using w3Schools.",
+        "user_id": 2,
+        "post_id": 4
     },
     {
-        "body": "A good framework to use for CSS is tailwind, although I personally like using React and vanilla css"
+        "body": "A good framework to use for CSS is tailwind, although I personally like using React and vanilla css",
+        "user_id": 1,
+        "post_id": 5
     },
     {
-        "body": "YouTube is sometimes the best teacher, try to target a specific target then find the linking technologies."
+        "body": "YouTube is sometimes the best teacher, try to target a specific target then find the linking technologies.",
+        "user_id": 11,
+        "post_id": 6
     },
     {
-        "body": "You won't learn everything at once, don't stress out and overload yourself. A good pace wins the race."
+        "body": "You won't learn everything at once, don't stress out and overload yourself. A good pace wins the race.",
+        "user_id": 10,
+        "post_id": 7
     },
     {
-        "body": "Discord was built with a JavaScript front-end and a Python back-end, I don't see why not."
+        "body": "Discord was built with a JavaScript front-end and a Python back-end, I don't see why not.",
+        "user_id": 9,
+        "post_id": 8
     },
     {
-        "body": "You can stick with UX/Front-end design if you want but you'll never get into the nitty gritty of programming."
+        "body": "You can stick with UX/Front-end design if you want but you'll never get into the nitty gritty of programming.",
+        "user_id": 8,
+        "post_id": 9
     },
     {
-        "body": "You could try getting a certification if you don't like self-learning."
+        "body": "You could try getting a certification if you don't like self-learning.",
+        "user_id": 6,
+        "post_id": 10
     },
     {
-        "body": "Cookies are small pieces of data that are stored on a user's computer by a website. They contain info like user login, statuses, shopping cart items etc."
+        "body": "Cookies are small pieces of data that are stored on a user's computer by a website. They contain info like user login, statuses, shopping cart items etc.",
+        "user_id": 7,
+        "post_id": 11
     }
 ]
