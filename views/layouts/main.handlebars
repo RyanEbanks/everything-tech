@@ -2,34 +2,55 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Tech Blog</title>
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <!-- Compiled and minified JavaScript -->
+    <title>Everything Tech</title>
 </head>
 
-<body class="flex-column min-100-vh">
-  <nav class="navbar">
-    <ul>
-      <li class="li-inline nav-item"><a href="/">Home</a></li>
-      <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
-      <li class="li-inline nav-item"><a href="/login">Login</a></li>
-      <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li>
-    </ul>
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+  
+        <a class="navbar-item">
+         Dashboard
+        </a>
+  
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </nav>
-  <header class="hero">
-    <h1 class="app-title"><a href="/">The Tech Blog</a></h1>
-  </header>
 
-  <main class="col-auto">
-    {{{body}}}
+  <main>
+  {{body}}
   </main>
 
-  <footer class="flex-row justify-center">
-    &copy; The Tech Blog Folks
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>copyright &copy;2023 Everything Tech.</p>
+    </div>
   </footer>
 </body>
 
 </html>
+
 <script src="/js/logout.js"></script>
