@@ -18,11 +18,9 @@
         <a class="navbar-item">
           Home
         </a>
-  
         <a class="navbar-item">
          Dashboard
         </a>
-  
       </div>
   
       <div class="navbar-end">
@@ -31,9 +29,15 @@
             <a class="button is-primary">
               <strong>Sign up</strong>
             </a>
+            {{#if logged_in}}
+            <a id="logout" class="button is-light">
+              Log Out
+            </a>
+            {{else}}
             <a class="button is-light">
               Log in
             </a>
+            {{/if}}
           </div>
         </div>
       </div>
