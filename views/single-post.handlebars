@@ -1,43 +1,38 @@
-<div class="post">
-
-  <div class="card">
+<div class="post myCard">
+  <div class="card myCard">
     <div class="card-content">
-      <h2>{{post.title}}</h2>
+      <h2>{{{user.posts.[0].title}}}</h2>
       <div>
-        Posted by {{post.User.username}} on {{format_date new DATE post.date_created}}
+        Posted by {{user.user_name}} on {{format_date user.posts.[0].date_created}}
       </div>
     </div>
     <div class="card-body">
-      {{post.body}}
+      {{{user.posts.[0].body}}}
     </div>
   </div>
 </div>
 
-<div class="card">
+<h3>Comments</h3>
+{{#if user}}
+<div class="card myCard">
   <div class="card-content">
-    {{#if post.Comments}}
-    <div class="card-header">
-      <h3>Comments</h3>
+    {{#each user.posts.[0].comments}}
+    <div>
+      <p>
+        {{{body}}}
+      </p>
+      <p>
+        &mdash; {{user.user_name}}, {{{format_date date_created}}}
+      </p>
     </div>
-
-    <div class="card-body">
-      {{#each post.Comments}}
-      <div>
-        <p>
-          {{body}}
-        </p>
-        <p>
-          &mdash; {{User.username}}, {{format_date new DATE date_created}}
-        </p>
-      </div>
-      {{/each}}
-    </div>
-    {{/if}}
+    {{/each}}
   </div>
+  {{/if}}
 </div>
 
 
-<form id="new-comment-form" class="card">
+
+<form id="new-comment-form" class="card myCard">
   <div class="content">
     <h3>Add New Comment</h3>
   </div>

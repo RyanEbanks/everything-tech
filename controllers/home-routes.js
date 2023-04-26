@@ -26,14 +26,26 @@ router.get('/', async (req, res) => {
 
 //Get Single Post
 router.get('/user/:id', async (req, res) => {
-    try {
-        const userData = await User.findByPk(req.params.id, {
+
+  try{
+  const userData = await User.findByPk(req.params.id, {
+    include: [
+      {
+        model: Post,
+        include: [
+          {
+            model: Comment,
             include: [
-                {
-                    model: Post,
-                }
-            ],
-        });
+              {
+                model: User,
+                attributes: ['user_name']
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  });
         const user = userData.get({plain: true});
         console.log(user);
         res.render('single-post', {user, user_id: req.session.user_id, logged_in: req.session.logged_in});
