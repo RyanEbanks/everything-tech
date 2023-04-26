@@ -17,6 +17,16 @@ body {
   margin-right: auto;
 }
 
+.myCard {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #dfe9eb;
+  border-color: #e5e7eb;
+}
 
+/*Not working for some reason*/
+footer {
+  width: 100%;
+}
   
 

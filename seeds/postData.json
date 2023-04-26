@@ -2,56 +2,67 @@
     {
         "title": "Binary",
         "body": "I am trying to understand binary but the math is confusing me, 1+0 is 1 but why is 1+1 not 2?",
+        "date_created": "4/10/2021",
         "user_id": 10
     },
     {
         "title": "CSS",
         "body": "I linked my CSS in the <head> using <link rel='stylesheet' href='/css/style.css'> and the file path link back.",
+        "date_created": "4/9/2021",
         "user_id": 7
     },
     {
         "title": "Learning Programming",
         "body": "I want to learn programming but I don't know where to start.",
+        "date_created": "4/11/2021",
         "user_id": 2
     },
     {
         "title": "Local Storage",
         "body": "My local storage isn't setting the item properly but I don't know what to do. I don't want to show my code because I'm new and embarrassed.",
+        "date_created": "4/12/2021",
         "user_id": 5
     },
     {
         "title": "CSS Frameworks",
         "body": "I've been using bootstrap but I don't like how all my projects look the same, any good frameworks out there?",
+        "date_created": "4/14/2021",
         "user_id": 11
     },
     {
         "title": "Is youtube a good teacher?",
         "body": "Youtube has a lot of false information, can I trust that when learning new topics?",
+        "date_created": "4/13/2021",
         "user_id": 4
     },
     {
         "title": "Stress",
         "body": "How do you get rid of the stress of coding all day every day?",
-        "user_id": 3
+        "user_id": 3,
+        "date_created": "4/17/2021"
     },
     {
         "title": "Two programming languages collabing??",
         "body": "I'm not sure how to phrase this but can I use two programming lanuages together to create an app? I just started coding but I would like to know for future reference.",
+        "date_created": "4/16/2021",
         "user_id": 8
     },
     {
         "title": "Back End Code",
         "body": "I am a UX designer and I just started coding. I want to get real good but back end seems really hard so can I become really good at programming with just front-end designing?",
+        "date_created": "4/18/2021",
         "user_id": 1
     },
     {
         "title": "I want to learn to code",
         "body": "I want to learn to code but Youtube isn't for me, I don't think I have the self-discipline to find topics by myself.",
+        "date_created": "4/20/2021",
         "user_id": 9
     },
     {
         "title": "What are cookies?",
         "body": "I want to learn what cookies are so I can use them in my code, I'm new to coding but when I hear cookies I think about the food.",
+        "date_created": "4/19/2021",
         "user_id": 6
     }
 ]

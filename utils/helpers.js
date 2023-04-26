@@ -1,5 +1,9 @@
 module.exports = {
-  format_date: date => {
-    return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+  format_date: (date) => {
+    // Convert date string to Date object
+    const dateObj = new Date(date);
+
+    // Format date as MM/DD/YYYY
+    return dateObj.toLocaleDateString();
   }
 };

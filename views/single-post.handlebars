@@ -4,7 +4,7 @@
     <div class="card-content">
       <h2>{{post.title}}</h2>
       <div>
-        Posted by {{post.User.username}} on {{format_date post.createdAt}}
+        Posted by {{post.User.username}} on {{format_date new DATE post.date_created}}
       </div>
     </div>
     <div class="card-body">
@@ -27,7 +27,7 @@
           {{body}}
         </p>
         <p>
-          &mdash; {{User.username}}, {{format_date createdAt}}
+          &mdash; {{User.username}}, {{format_date new DATE date_created}}
         </p>
       </div>
       {{/each}}
