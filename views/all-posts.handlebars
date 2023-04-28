@@ -5,7 +5,7 @@
       <article class="content">
         <div class="content">
           <h2>
-            <a href="/post/{{id}}">{{title}}</a>
+            <a href="/post/{{this.id}}" onclick="location.href='/post/{{this.id}}'">{{title}}</a>
           </h2>
           <div>
             Posted by {{user.user_name}} on {{format_date date_created}}

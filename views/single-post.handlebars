@@ -1,22 +1,22 @@
 <div class="post myCard">
   <div class="card myCard">
     <div class="card-content">
-      <h2>{{{user.posts.[0].title}}}</h2>
+      <h2>{{{post.title}}}</h2>
       <div>
-        Posted by {{user.user_name}} on {{format_date user.posts.[0].date_created}}
+        Posted by {{post.user.user_name}} on {{format_date post.date_created}}
       </div>
     </div>
     <div class="card-body">
-      {{{user.posts.[0].body}}}
+      {{{post.body}}}
     </div>
   </div>
 </div>
 
 <h3>Comments</h3>
-{{#if user}}
+{{#if post}}
 <div class="card myCard">
   <div class="card-content">
-    {{#each user.posts.[0].comments}}
+    {{#each post.comments}}
     <div>
       <p>
         {{{body}}}

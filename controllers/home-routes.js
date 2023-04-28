@@ -17,23 +17,23 @@ router.get('/', async (req, res) => {
     }
     
     // res.status(200).json("Homepage Route Working!");
-    // console.log(post);
-    res.render('all-posts', { post, user_id: req.session.user_id, logged_in: req.session.logged_in });
+    res.render('all-posts', { post, id: req.session.id, logged_in: req.session.logged_in });
+    console.log('\n\nreq.session being logged in', req.session.logged_in, '\n\n');
   } catch(err) {
     res.status(500).json(err);
   }
 });
 
 //Get Single Post
-router.get('/user/:id', async (req, res) => {
+router.get('/post/:id', async (req, res) => {
 
   try{
-  const userData = await User.findByPk(req.params.id, {
+  const postData = await Post.findByPk(req.params.id, {
     include: [
       {
-        model: Post,
-        include: [
-          {
+        model: User,
+      },
+      {
             model: Comment,
             include: [
               {
@@ -41,14 +41,12 @@ router.get('/user/:id', async (req, res) => {
                 attributes: ['user_name']
               }
             ]
-          }
-        ]
       }
     ]
   });
-        const user = userData.get({plain: true});
-        console.log(user);
-        res.render('single-post', {user, user_id: req.session.user_id, logged_in: req.session.logged_in});
+        const post = postData.get({plain: true});
+        console.log(post);
+        res.render('single-post', {post, user_id: req.session.id, logged_in: req.session.logged_in});
     }catch(err) {
         res.status(500).json(err);
     }

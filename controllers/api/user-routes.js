@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
       });
   
       req.session.save(() => {
-        req.session.user_id = userData.id;
+        req.session.id = userData.id;
         req.session.logged_in = true;
   
         res.status(200).json(userData);
@@ -25,7 +25,10 @@ router.post('/', async (req, res) => {
   router.post('/login', async (req, res) => {
     try {
       const userData = await User.findOne({ where: { email: req.body.email } });
-  
+      console.log('\n\nUSER DATA:  ', userData);
+      console.log("\n\nEmail: ", req.body.email);
+      console.log("\n\nPassword: ", req.body.password);
+
       //Checks for a valid email address in the database
       if (!userData) {
         res
@@ -35,6 +38,7 @@ router.post('/', async (req, res) => {
       }
   
       const validPassword = await userData.checkPassword(req.body.password);
+      console.log('\n\nIS PASSWORD VALID: ', validPassword);
   
       //Checks for a valid password in the database
       if (!validPassword) {
@@ -43,16 +47,18 @@ router.post('/', async (req, res) => {
           .json({ message: 'Incorrect email or password, please try again' });
         return;
       }
-  
+
       //Saves the user ID and enables functions with the withAuth argument to run
       req.session.save(() => {
-        req.session.user_id = userData.id;
+        req.session.id = userData.id;
         req.session.logged_in = true;
-        
+        console.log('\n\nUSER DATA ID:  ', req.session.id)
+
         res.json({ user: userData, message: 'You are now logged in!' });
       });
   
     } catch (err) {
+      console.log('\n\nLOGIN ERROR: ', err);
       res.status(400).json(err);
     }
   });

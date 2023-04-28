@@ -1,13 +1,11 @@
-<form id="login-form" class="card-body"></form>
-<div class="card">
-  <div class="card-content">
-    <div class="content">
-
-      <div class="field">
+<form id="login-form" class="card-body">
+  <div class="card">
+    <div class="card-content">
+      <div class="content">
         <div class="field">
           <label class="label">Email</label>
           <div class="control has-icons-left has-icons-right">
-            <input id="email-login" class="input is-danger" type="email" placeholder="Enter Email">
+            <input id="email-login" class="input is-danger" name="email" type="email" placeholder="Enter Email">
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -22,7 +20,7 @@
         <div class="field">
           <label class="label">Password</label>
           <div class="control has-icons-left has-icons-right">
-            <input id="password-login" class="input is-success" type="text" placeholder="Enter Password">
+            <input id="password-login" class="input is-success" type="password" name="password" placeholder="Enter Password">
             <span class="icon is-small is-left">
               <i class="fas fa-user"></i>
             </span>
@@ -35,12 +33,12 @@
         </div>
 
         <div class="control">
-          <button class="button is-link">Submit</button>
-          <button class="button is-link" href="/signup">Sign Up</button>
+          <button class="button is-link" type="submit">Login</button>
+          <button class="button is-link" onclick="location.href='/signup';">Sign Up</button>
         </div>
       </div>
     </div>
   </div>
 </form>
 
-  <script src="/js/login.js"></script>
+<script src="/js/login.js"></script>
