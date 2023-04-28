@@ -8,15 +8,19 @@ router.post('/', withAuth, async(req, res) => {
         const newComment = await Comment.create({
             //req.body will print whatever is in the body in this case, body, user_id & post_id from the commentData.json
             //body would be req.body.body
-            ...req.body,
+            body: req.body.body,
             //creating the session id with the user_id
             user_id: req.session.user_id,
+            post_id: req.body.post_id,
+            id: null
         });
 
-        res.status(200).json(newComment);
+        const post = await Post.findByPk(req.body.post_id, { include: [Comment, User] });
+        res.status(200).json(post);
     }catch(err) {
         res.status(400).json(err);
     }
 });
+
 
 module.exports = router;

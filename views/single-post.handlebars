@@ -14,9 +14,9 @@
 
 <h3>Comments</h3>
 {{#if post}}
+  {{#each post.comments}}
 <div class="card myCard">
   <div class="card-content">
-    {{#each post.comments}}
     <div>
       <p>
         {{{body}}}
@@ -25,14 +25,14 @@
         &mdash; {{user.user_name}}, {{{format_date date_created}}}
       </p>
     </div>
-    {{/each}}
   </div>
-  {{/if}}
 </div>
+    {{/each}}
+{{/if}}
 
 
-
-<form id="new-comment-form" class="card myCard">
+{{#if logged_in}}
+<form id="new-comment-form" class="card myCard" action="/api/comment" method="POST">
   <div class="content">
     <h3>Add New Comment</h3>
   </div>
@@ -42,11 +42,11 @@
 
     <label class="form-label" for="comment-body">Comment</label>
 
-    <textarea name="comment-body" class="form-input"></textarea>
+    <textarea name="body" class="form-input"></textarea>
 
     <button type="submit" class="btn">Submit</button>
   </div>
 </form>
-</div>
 
+{{/if}}
 <script src="/js/comment.js"></script>
