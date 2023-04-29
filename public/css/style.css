@@ -11,7 +11,7 @@
   box-sizing: border-box;
 } */
 
-body {
+.bodyMargins {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -28,6 +28,12 @@ body {
   margin-bottom: 10px;
   background-color: #dfe9eb;
   border-color: #e5e7eb;
+}
+
+
+
+.postDiv {
+  margin-top: 100px;
 }
 
 /*Not working for some reason*/
