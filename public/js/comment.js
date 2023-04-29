@@ -5,36 +5,40 @@ const commentFormHandler = async (event) => {
   
     const commentBody = document.querySelector('textarea[name="body"]').value.trim();
     const postId = document.querySelector('input[name="post-id"]').value;
+    const userId = document.querySelector('input[name="user-id"]').value;
+
   
     if (commentBody && postId) {
       const response = await fetch('/api/comment', {
         method: 'POST',
-        body: JSON.stringify({ body: commentBody, post_id: postId }),
+        body: JSON.stringify({ body: commentBody, post_id: postId, user_id: userId }),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
         const post = await response.json();
-
+      
         // Get the comments container and clear its contents
         const commentsContainer = document.querySelector('.comments-container');
-        commentsContainer.innerHTML = '';
-
-        // Iterate through each comment in the post and add it to the comments container
-        post.comments.forEach(comment => {
+        if (commentsContainer) {
+          commentsContainer.innerHTML = '';
+      
+          // Iterate through each comment in the post and add it to the comments container
+          post.comments.forEach(comment => {
             const commentEl = document.createElement('div');
             commentEl.innerHTML = `
-                <div>
-                    <p>${comment.body}</p>
-                    <p>&mdash; ${comment.user.user_name}, ${format_date(comment.date_created)}</p>
-                </div>
+              <div>
+                <p>${comment.body}</p>
+                <p>&mdash; ${comment.user.user_name}, ${format_date(comment.date_created)}</p>
+              </div>
             `;
             commentsContainer.appendChild(commentEl);
-        });
-
-        // Clear the comment input field
-        document.querySelector('textarea[name="body"]').value = '';
-    } else {
+          });
+      
+          // Clear the comment input field
+          document.querySelector('textarea[name="body"]').value = '';
+        }
+      } else {
         alert('Failed to create comment');
       }
     }

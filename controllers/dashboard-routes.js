@@ -4,8 +4,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
   try {
-    console.log('req.session.user_id:', req.session.user_id); // added console.log statement
-    const user = await User.findEmailById(req.session.user_id);
+    const user = await User.findOne({ where: { id: req.session.user_id} });
     console.log('user:', user); // added console.log statement
     const dashboardData = await Post.findAll({
       where: { user_id: req.session.user_id },
@@ -16,6 +15,7 @@ router.get('/', withAuth, async (req, res) => {
         },
       ],
     });
+
     const dashboard = dashboardData.map((post) => post.get({ plain: true }));
 
     res.render('dashboard', {
@@ -24,6 +24,8 @@ router.get('/', withAuth, async (req, res) => {
       user_id: req.session.user_id,
       logged_in: true,
     });
+    console.log('req.session.user_id:', req.session.user_id); // added console.log statement
+    console.log("\n\n", req.session);
   } catch (err) {
     res.status(500).json(err);
   }
