@@ -50,7 +50,7 @@ router.post('/', async (req, res) => {
 
       //Saves the user ID and enables functions with the withAuth argument to run
       req.session.save(() => {
-        req.session.id = userData.id;
+        req.session.user_id = userData.id;
         req.session.logged_in = true;
         console.log('\n\nUSER DATA ID:  ', req.session.id)
 

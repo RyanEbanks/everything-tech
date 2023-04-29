@@ -6,6 +6,13 @@ class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
+
+  static findEmailById(id) {
+    return this.findOne({
+      where: { id },
+      attributes: ['email'],
+    });
+  }
 }
 
 User.init(
