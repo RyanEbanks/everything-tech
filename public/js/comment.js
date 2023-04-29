@@ -14,7 +14,8 @@ const commentFormHandler = async (event) => {
         body: JSON.stringify({ body: commentBody, post_id: postId, user_id: userId }),
         headers: { 'Content-Type': 'application/json' },
       });
-  
+      console.log({ body: commentBody, post_id: postId, user_id: userId });
+
       if (response.ok) {
         const post = await response.json();
       
@@ -37,6 +38,8 @@ const commentFormHandler = async (event) => {
       
           // Clear the comment input field
           document.querySelector('textarea[name="body"]').value = '';
+          //refresh the page
+          document.location.reload();
         }
       } else {
         alert('Failed to create comment');
